@@ -1,0 +1,15 @@
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - period
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+            
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - dosage
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+        
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - version
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - medicine
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+    
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - medicine name=Panadol pharm=Farmaclair
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+        

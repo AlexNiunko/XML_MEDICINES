@@ -1,0 +1,5 @@
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - medicine
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - medicines
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endDocument]] - Parsing ended

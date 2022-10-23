@@ -1,0 +1,13 @@
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - price
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 15
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - price
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+            
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - package
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+            
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - dosage
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - amount
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 3

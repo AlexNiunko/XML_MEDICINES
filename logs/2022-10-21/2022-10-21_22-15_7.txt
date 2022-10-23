@@ -1,0 +1,13 @@
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - expiration
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 2022-10-23
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - expiration
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - organization
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - KRKA
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - organization
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+            
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - certificate
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+            

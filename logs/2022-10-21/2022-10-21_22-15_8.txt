@@ -1,0 +1,13 @@
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - package
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - type
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - bottle
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - type
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - amount
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 250
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - amount
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                

@@ -1,0 +1,13 @@
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - certificate
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - number
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - CVB2345
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - number
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - dateOfIssue
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 2022-10-23
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - dateOfIssue
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+                

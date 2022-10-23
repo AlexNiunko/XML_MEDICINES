@@ -1,0 +1,13 @@
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - group
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - analgesic
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - group
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+        
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - analogs
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - ksefokam,aspirin,nalgesin
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - analogs
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+        
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[startElement]] - version type=suspension
+2022-10-21 22:15:45 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+            

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/medicines"
+        xmlns:tns="http://www.example.com/medicines"
+        elementFormDefault="qualified">
+    <element name="medicines">
+        <complexType>
+            <sequence>
+                <element name="medicine" type="tns:Medicine" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Medicine">
+        <sequence>
+            <element name="group">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="antiseptic"/>
+                        <enumeration value="analgesic"/>
+                        <enumeration value="vitamins"/>
+                        <enumeration value="anesthetics"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="analogs">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="([A-Z])[a-zA-z0-9 ]{1,10}[a-zA-z0-9]"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="version">
+                <complexType>
+                    <sequence>
+                        <element name="certificate" type="tns:Certificate"/>
+                        <element name="medicine_package" type="tns:Medicine_package"/>
+                        <element name="medicine_dosage" type="tns:Medicine_dosage"/>
+                    </sequence>
+                    <attribute name="version_type" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="tablets"/>
+                                <enumeration value="spray"/>
+                                <enumeration value="suspension"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
+                </complexType>
+            </element>
+        </sequence>
+        <attribute name="name" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <pattern value="([A-Z])[a-zA-z0-9 ]{1,10}[a-zA-z0-9]"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="pharm" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="KRKA"/>
+                    <enumeration value="Farmaclair"/>
+                    <enumeration value="Pfizer"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+<complexType name="Certificate">
+    <sequence>
+        <element name="number">
+            <simpleType>
+                <restriction base="ID">
+                    <pattern value="(\\w){10,20}"/>
+                </restriction>
+            </simpleType>
+        </element>
+        <element name="dateOfIssue" type="date"/>
+        <element name="expiration" type="date"/>
+        <element name="organization">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="KRKA"/>
+                    <enumeration value="Farmaclair"/>
+                    <enumeration value="Pfizer"/>
+                </restriction>
+            </simpleType>
+        </element>
+    </sequence>
+</complexType>
+    <complexType name="Medicine_package">
+        <sequence>
+            <element name="package_type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="bottle"/>
+                        <enumeration value="box"/>
+                        <enumeration value="plate"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="package_amonut" type="nonNegativeInteger"/>
+            <element name="package_price" type="nonNegativeInteger"/>
+        </sequence>
+    </complexType>
+    <complexType name="Medicine_dosage">
+        <sequence>
+            <element name="dosage_amonut" type="nonNegativeInteger"/>
+            <element name="dosage_period">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="day"/>
+                    <enumeration value="wek"/>
+                    <enumeration value="month"/>
+                </restriction>
+            </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+</schema>
