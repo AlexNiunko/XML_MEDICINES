@@ -23,7 +23,7 @@
 </medicine>
     <medicine name="Panadol" pharm="Farmaclair">
         <group>analgesic</group>
-        <analogs>ksefokam,aspirin,nalgesin</analogs>
+        <analogs>ksefokam,aspirin,analgesin</analogs>
         <version versionType="suspension">
             <certificate>
                 <number>CVB2345</number>
@@ -36,10 +36,10 @@
                 <packageAmount>250</packageAmount>
                 <packagePrice>15</packagePrice>
             </medicinePackage>
-            <dosage>
+            <medicineDosage>
                 <dosageAmount>3</dosageAmount>
                 <dosagePeriod>day</dosagePeriod>
-            </dosage>
+            </medicineDosage>
         </version>
     </medicine>
 </medicines>

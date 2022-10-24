@@ -6,10 +6,13 @@ public class Version {
     private MedicinePackage medicinePackage=new MedicinePackage();
     private Dosage dosage=new Dosage();
 
+
+
     public Version() {
     }
 
-    public Version(Certificate certificate, MedicinePackage medicinePackage, Dosage dosage) {
+    public Version(String version_type, Certificate certificate, MedicinePackage medicinePackage, Dosage dosage) {
+        this.version_type = version_type;
         this.certificate = certificate;
         this.medicinePackage = medicinePackage;
         this.dosage = dosage;
@@ -71,7 +74,8 @@ public class Version {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Version{");
-        sb.append("certificate=").append(certificate);
+        sb.append("version_type='").append(version_type).append('\'');
+        sb.append(", certificate=").append(certificate);
         sb.append(", medicinePackage=").append(medicinePackage);
         sb.append(", dosage=").append(dosage);
         sb.append('}');

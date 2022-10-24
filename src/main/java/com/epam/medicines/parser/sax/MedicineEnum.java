@@ -6,22 +6,22 @@ public enum MedicineEnum {
     NAME("name"),
     PHARM("pharm"),
     VERSION("version"),
-    VERSION_TYPE("versionType"),
+    VERSIONTYPE("versionType"),
     CERTIFICATE("certificate"),
-    MEDICINE_PACKAGE("medicinePackage"),
-    MEDICINE_DOSAGE("medicineDosage"),
+    MEDICINEPACKAGE("medicinePackage"),
+    MEDICINEDOSAGE("medicineDosage"),
 
     NUMBER("number"),
     GROUP("group"),
     ANALOGS("analogs"),
-    DATE_OF_ISSUE("dateOfIssue"),
+    DATEOFISSUE("dateOfIssue"),
     EXPIRATION("expiration"),
     ORGANIZATION("organization"),
-    PACKAGE_TYPE("packageType"),
-    PACKAGE_AMOUNT("packageAmount"),
-    PACKAGE_PRICE("packagePrice"),
-    DOSAGE_AMOUNT("dosageAmount"),
-    DOSAGE_PERIOD("dosagePeriod");
+    PACKAGETYPE("packageType"),
+    PACKAGEAMOUNT("packageAmount"),
+    PACKAGEPRICE("packagePrice"),
+    DOSAGEAMOUNT("dosageAmount"),
+    DOSAGEPERIOD("dosagePeriod");
 
     private String value;
 

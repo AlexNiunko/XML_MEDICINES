@@ -25,7 +25,7 @@ public class MedicineSaxHandler extends DefaultHandler {
 
     public MedicineSaxHandler() {
         medicines = new LinkedList<>();
-        withText = EnumSet.range(MedicineEnum.NUMBER, MedicineEnum.DOSAGE_PERIOD);
+        withText = EnumSet.range(MedicineEnum.NUMBER, MedicineEnum.DOSAGEPERIOD);
     }
 
     public LinkedList<Medicine> getMedicines() {
@@ -34,13 +34,12 @@ public class MedicineSaxHandler extends DefaultHandler {
 
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         if (ELEMENT_MEDICINE.equals(qName)) {
-            current = new Medicine();
+            current=new Medicine();
             current.setName(attributes.getValue(0));
             if (attributes.getLength() == 2) {
                 current.setPharm(attributes.getValue(1));
             }
         } else if (ELEMENT_VERSION.equals(qName)){
-            current=new Medicine();
             current.getVersion().setVersion_type(attributes.getValue(0));
         }
         else {
@@ -77,7 +76,7 @@ public class MedicineSaxHandler extends DefaultHandler {
                 case NUMBER:
                     current.getVersion().getCertificate().setNumber(data);
                     break;
-                case DATE_OF_ISSUE:
+                case DATEOFISSUE:
                     current.getVersion().getCertificate().setDateOfIssue(data);
                     break;
                 case EXPIRATION:
@@ -86,16 +85,19 @@ public class MedicineSaxHandler extends DefaultHandler {
                 case ORGANIZATION:
                     current.getVersion().getCertificate().setOrganization(data);
                     break;
-                case PACKAGE_TYPE:
+                case PACKAGETYPE:
                     current.getVersion().getMedicinePackage().setType(data);
                     break;
-                case PACKAGE_AMOUNT:
+                case PACKAGEAMOUNT:
                     current.getVersion().getMedicinePackage().setAmount(Integer.parseInt(data));
                     break;
-                case DOSAGE_AMOUNT:
+                case PACKAGEPRICE:
+                    current.getVersion().getMedicinePackage().setPrice(Integer.parseInt(data));
+                    break;
+                case DOSAGEAMOUNT:
                     current.getVersion().getDosage().setAmount(Integer.parseInt(data));
                     break;
-                case DOSAGE_PERIOD:
+                case DOSAGEPERIOD:
                     current.getVersion().getDosage().setPeriod(data);
                     break;
                 default:
