@@ -21,11 +21,11 @@ public class MedicineSaxHandler extends DefaultHandler {
     private EnumSet<MedicineEnum> withText;
 
     private static final String ELEMENT_MEDICINE = "medicine";
-    private static final String ELEMENT_VERSION="version";
+    private static final String ELEMENT_VERSION = "version";
 
     public MedicineSaxHandler() {
         medicines = new LinkedList<>();
-        withText = EnumSet.range(MedicineEnum.NUMBER, MedicineEnum.DOSAGEPERIOD);
+        withText = EnumSet.range(MedicineEnum.NUMBER, MedicineEnum.DOSAGE_PERIOD);
     }
 
     public LinkedList<Medicine> getMedicines() {
@@ -34,15 +34,14 @@ public class MedicineSaxHandler extends DefaultHandler {
 
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         if (ELEMENT_MEDICINE.equals(qName)) {
-            current=new Medicine();
+            current = new Medicine();
             current.setName(attributes.getValue(0));
             if (attributes.getLength() == 2) {
                 current.setPharm(attributes.getValue(1));
             }
-        } else if (ELEMENT_VERSION.equals(qName)){
+        } else if (ELEMENT_VERSION.equals(qName)) {
             current.getVersion().setVersion_type(attributes.getValue(0));
-        }
-        else {
+        } else {
             MedicineEnum temp = MedicineEnum.valueOf(qName.toUpperCase());
             if (withText.contains(temp)) {
                 currentEnum = temp;
@@ -57,26 +56,25 @@ public class MedicineSaxHandler extends DefaultHandler {
         }
     }
 
-
     public void characters(char[] ch, int start, int length) throws SAXException {
-        String data=new String(ch,start,length).strip();
+        String data = new String(ch, start, length).strip();
         if (currentEnum != null) {
             switch (currentEnum) {
                 case GROUP:
                     current.setGroup(data);
                     break;
                 case ANALOGS:
-                    String  [] dataArray=data.split(",");
+                    String[] dataArray = data.split(",");
                     List<String> datacollect = Arrays.stream(dataArray).collect(Collectors.toList());
-                    List<Analogs>analogs=datacollect.stream()
-                            .map(analog->new Analogs(analog))
+                    List<Analogs> analogs = datacollect.stream()
+                            .map(analog -> new Analogs(analog))
                             .collect(Collectors.toList());
                     current.setAnalogsList(analogs);
                     break;
                 case NUMBER:
                     current.getVersion().getCertificate().setNumber(data);
                     break;
-                case DATEOFISSUE:
+                case DATE_OF_ISSUE:
                     current.getVersion().getCertificate().setDateOfIssue(data);
                     break;
                 case EXPIRATION:
@@ -85,25 +83,25 @@ public class MedicineSaxHandler extends DefaultHandler {
                 case ORGANIZATION:
                     current.getVersion().getCertificate().setOrganization(data);
                     break;
-                case PACKAGETYPE:
+                case PACKAGE_TYPE:
                     current.getVersion().getMedicinePackage().setType(data);
                     break;
-                case PACKAGEAMOUNT:
+                case PACKAGE_AMOUNT:
                     current.getVersion().getMedicinePackage().setAmount(Integer.parseInt(data));
                     break;
-                case PACKAGEPRICE:
+                case PACKAGE_PRICE:
                     current.getVersion().getMedicinePackage().setPrice(Integer.parseInt(data));
                     break;
-                case DOSAGEAMOUNT:
+                case DOSAGE_AMOUNT:
                     current.getVersion().getDosage().setAmount(Integer.parseInt(data));
                     break;
-                case DOSAGEPERIOD:
+                case DOSAGE_PERIOD:
                     current.getVersion().getDosage().setPeriod(data);
                     break;
                 default:
                     throw new EnumConstantNotPresentException(currentEnum.getDeclaringClass(), currentEnum.name());
             }
         }
-        currentEnum=null;
+        currentEnum = null;
     }
 }

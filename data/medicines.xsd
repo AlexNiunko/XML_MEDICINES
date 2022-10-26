@@ -74,7 +74,7 @@
                 </restriction>
             </simpleType>
         </element>
-        <element name="dateOfIssue" type="date"/>
+        <element name="date_of_issue" type="date"/>
         <element name="expiration" type="date"/>
         <element name="organization">
             <simpleType>

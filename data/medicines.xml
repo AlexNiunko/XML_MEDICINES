@@ -3,43 +3,43 @@
 <medicine name="Septolete" pharm="KRKA">
     <group>antiseptic</group>
     <analogs>Strepsils,Hepilor,Angileks</analogs>
-        <version versionType="spray">
+        <version version_type="spray">
             <certificate>
                 <number>123456MLD</number>
-                <dateOfIssue>2022-10-12</dateOfIssue>
+                <date_of_issue>2022-10-12</date_of_issue>
                 <expiration>2024-10-12</expiration>
                 <organization>Heatlhcare</organization>
             </certificate>
-            <medicinePackage>
-                <packageType>bottle</packageType>
-                <packageAmount>250</packageAmount>
-                <packagePrice>25</packagePrice>
-            </medicinePackage>
-            <medicineDosage>
-                <dosageAmount>2</dosageAmount>
-                <dosagePeriod>day</dosagePeriod>
-            </medicineDosage>
+            <medicine_package>
+                <package_type>bottle</package_type>
+                <package_amount>250</package_amount>
+                <package_price>25</package_price>
+            </medicine_package>
+            <medicine_dosage>
+                <dosage_amount>2</dosage_amount>
+                <dosage_period>day</dosage_period>
+            </medicine_dosage>
         </version>
 </medicine>
     <medicine name="Panadol" pharm="Farmaclair">
         <group>analgesic</group>
         <analogs>ksefokam,aspirin,analgesin</analogs>
-        <version versionType="suspension">
+        <version version_type="suspension">
             <certificate>
                 <number>CVB2345</number>
-                <dateOfIssue>2022-10-23</dateOfIssue>
+                <date_of_issue>2022-10-23</date_of_issue>
                 <expiration>2022-10-23</expiration>
                 <organization>KRKA</organization>
             </certificate>
-            <medicinePackage>
-                <packageType>bottle</packageType>
-                <packageAmount>250</packageAmount>
-                <packagePrice>15</packagePrice>
-            </medicinePackage>
-            <medicineDosage>
-                <dosageAmount>3</dosageAmount>
-                <dosagePeriod>day</dosagePeriod>
-            </medicineDosage>
+            <medicine_package>
+                <package_type>bottle</package_type>
+                <package_amount>250</package_amount>
+                <package_price>15</package_price>
+            </medicine_package>
+            <medicine_dosage>
+                <dosage_amount>3</dosage_amount>
+                <dosage_period>day</dosage_period>
+            </medicine_dosage>
         </version>
     </medicine>
 </medicines>
