@@ -6,7 +6,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 import java.io.IOException;
 
-public class SaxMedicineParser {
+public class SaxMedicineConsoleParser {
     private static final String path="data\\medicines.xml";
     public static void main(String[] args) {
 

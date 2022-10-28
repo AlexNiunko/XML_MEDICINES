@@ -1,36 +1,34 @@
 package com.epam.medicines.validator;
-
-import org.apache.log4j.FileAppender;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
-import org.xml.sax.helpers.DefaultHandler;
-import org.apache.log4j.Logger;
-import org.apache.log4j.SimpleLayout;
+import org.apache.log4j.FileAppender;
 
 import java.io.IOException;
 
-public class MedicineErrorHandler extends DefaultHandler {
-    private Logger logger = Logger.getLogger("com.epam.niunko");
+public class MedicineErrorHandler implements ErrorHandler {
+    private Logger logger = LogManager.getLogger("com.epam.niunko");
 
-    public MedicineErrorHandler(String log) throws IOException {
-        logger.addAppender(new FileAppender(new SimpleLayout(), log));
+
+    @Override
+    public void warning(SAXParseException exception) throws SAXException {
+        logger.warn(getLineColumnNumber(exception)+" - "+exception.getMessage());
     }
 
-    public MedicineErrorHandler() {
+    @Override
+    public void error(SAXParseException exception) throws SAXException {
+        logger.error(getLineColumnNumber(exception)+" - "+exception.getMessage());
+
     }
 
-    public void warning(SAXParseException e) {
-        logger.warn(getLineAddress(e) + e.getMessage());
-    }
+    @Override
+    public void fatalError(SAXParseException exception) throws SAXException {
+        logger.fatal(getLineColumnNumber(exception)+" - "+exception.getMessage());
 
-    public void error(SAXParseException e) {
-        logger.error(getLineAddress(e) + e.getMessage());
     }
-
-    public void fatalError(SAXParseException e) {
-        logger.fatal(getLineAddress(e) + e.getMessage());
-    }
-
-    private String getLineAddress(SAXParseException e) {
-        return e.getLineNumber() + " : " + e.getColumnNumber();
+    private String getLineColumnNumber(SAXParseException e){
+        return e.getLineNumber()+" : "+e.getColumnNumber();
     }
 }

@@ -2,7 +2,7 @@ package com.epam.medicines.parser.sax;
 
 import com.epam.medicines.entity.Analogs;
 import com.epam.medicines.entity.Medicine;
-import com.epam.medicines.entity.Version;
+import com.epam.medicines.parser.MedicineEnum;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;

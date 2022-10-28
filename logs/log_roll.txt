@@ -1,5 +1,2 @@
-2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - medicine
-2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
-
-2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - medicines
-2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endDocument]] - Parsing ended
+2022-10-28 15:22:03 [main] ERROR com.epam.niunko [[error]] - 31 : 41 - cvc-pattern-valid: Value 'CVB2345' is not facet-valid with respect to pattern '(\\w){10,20}' for type '#AnonType_numberCertificate'.
+2022-10-28 15:22:03 [main] ERROR com.epam.niunko [[error]] - 31 : 41 - cvc-type.3.1.3: The value 'CVB2345' of element 'number' is not valid.

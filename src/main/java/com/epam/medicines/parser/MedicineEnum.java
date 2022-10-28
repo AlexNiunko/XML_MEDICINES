@@ -1,4 +1,4 @@
-package com.epam.medicines.parser.sax;
+package com.epam.medicines.parser;
 
 public enum MedicineEnum {
     MEDICINES("medicines"),
