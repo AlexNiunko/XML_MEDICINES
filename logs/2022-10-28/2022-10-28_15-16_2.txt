@@ -1,0 +1,5 @@
+2022-10-28 15:16:25 [main] ERROR com.epam.niunko [[error]] - 13 : 56 - cvc-enumeration-valid: Value 'Heatlhcare' is not facet-valid with respect to enumeration '[KRKA, Farmaclair, Pfizer]'. It must be a value from the enumeration.
+2022-10-28 15:16:25 [main] ERROR com.epam.niunko [[error]] - 13 : 56 - cvc-type.3.1.3: The value 'Heatlhcare' of element 'organization' is not valid.
+2022-10-28 15:16:25 [main] ERROR com.epam.niunko [[error]] - 17 : 33 - cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.example.com/medicines":package_amount}'. One of '{"http://www.example.com/medicines":package_amonut}' is expected.
+2022-10-28 15:16:25 [main] ERROR com.epam.niunko [[error]] - 21 : 32 - cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.example.com/medicines":dosage_amount}'. One of '{"http://www.example.com/medicines":dosage_amonut}' is expected.
+2022-10-28 15:16:25 [main] ERROR com.epam.niunko [[error]] - 28 : 54 - cvc-pattern-valid: Value 'ksefokam,aspirin,analgesin' is not facet-valid with respect to pattern '([A-Z])[a-zA-z0-9 ]{1,10}[a-zA-z0-9]' for type '#AnonType_analogsMedicine'.

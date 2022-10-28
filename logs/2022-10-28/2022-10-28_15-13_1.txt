@@ -1,0 +1,10 @@
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - medicine
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[characters]] - 
+
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endElement]] - medicines
+2022-10-21 22:15:46 [main] INFO  com.epam.medicines.parser.ConsoleMedicineHandler [[endDocument]] - Parsing ended
+2022-10-28 14:59:32 [main] ERROR com.epam.niunko [[error]] - 2 : 12 - cvc-elt.1.a: Cannot find the declaration of element 'medicines'.
+2022-10-28 15:01:48 [main] ERROR com.epam.niunko [[error]] - 2 : 12 - cvc-elt.1.a: Cannot find the declaration of element 'medicines'.
+2022-10-28 15:04:04 [main] ERROR com.epam.niunko [[error]] - 2 : 12 - cvc-elt.1.a: Cannot find the declaration of element 'medicines'.
+2022-10-28 15:05:27 [main] ERROR com.epam.niunko [[error]] - 2 : 12 - cvc-elt.1.a: Cannot find the declaration of element 'medicines'.
+2022-10-28 15:08:04 [main] ERROR com.epam.niunko [[error]] - 2 : 12 - cvc-elt.1.a: Cannot find the declaration of element 'medicines'.
