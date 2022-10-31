@@ -87,7 +87,7 @@ public class MedicineStaxBuilder {
             int type = reader.next();
             switch (type) {
                 case XMLStreamConstants.START_ELEMENT:
-                    name= reader.getLocalName();
+                    name = reader.getLocalName();
                     switch (MedicineEnum.valueOf(name.toUpperCase())) {
                         case CERTIFICATE -> version.setCertificate(getXMLCertificate(reader));
                         case MEDICINE_PACKAGE -> version.setMedicinePackage(getXMLMedicinePackage(reader));
@@ -121,8 +121,8 @@ public class MedicineStaxBuilder {
                     }
                     break;
                 case XMLStreamConstants.END_ELEMENT:
-                    name=reader.getLocalName();
-                    if (MedicineEnum.valueOf(name.toUpperCase())==MedicineEnum.CERTIFICATE){
+                    name = reader.getLocalName();
+                    if (MedicineEnum.valueOf(name.toUpperCase()) == MedicineEnum.CERTIFICATE) {
                         return certificate;
                     }
             }
@@ -132,7 +132,7 @@ public class MedicineStaxBuilder {
 
 
     private MedicinePackage getXMLMedicinePackage(XMLStreamReader reader) throws XMLStreamException {
-        MedicinePackage medicinePackage=new MedicinePackage();
+        MedicinePackage medicinePackage = new MedicinePackage();
         String name;
         while (reader.hasNext()) {
             int type = reader.next();
@@ -140,22 +140,23 @@ public class MedicineStaxBuilder {
                 case XMLStreamConstants.START_ELEMENT:
                     name = reader.getLocalName();
                     switch (MedicineEnum.valueOf(name.toUpperCase())) {
-                        case PACKAGE_TYPE->medicinePackage.setType(getXMLText(reader));
+                        case PACKAGE_TYPE -> medicinePackage.setType(getXMLText(reader));
                         case PACKAGE_AMOUNT -> medicinePackage.setAmount(Integer.parseInt(getXMLText(reader)));
                         case PACKAGE_PRICE -> medicinePackage.setPrice(Integer.parseInt(getXMLText(reader)));
                     }
                     break;
                 case XMLStreamConstants.END_ELEMENT:
-                    name=reader.getLocalName();
-                    if (MedicineEnum.valueOf(name.toUpperCase())==MedicineEnum.MEDICINE_PACKAGE){
+                    name = reader.getLocalName();
+                    if (MedicineEnum.valueOf(name.toUpperCase()) == MedicineEnum.MEDICINE_PACKAGE) {
                         return medicinePackage;
                     }
             }
         }
         throw new XMLStreamException("Unknow element in tag <MedicinePackage>");
     }
+
     private Dosage getXMLDosage(XMLStreamReader reader) throws XMLStreamException {
-        Dosage dosage=new Dosage();
+        Dosage dosage = new Dosage();
         String name;
         while (reader.hasNext()) {
             int type = reader.next();
@@ -168,16 +169,14 @@ public class MedicineStaxBuilder {
                     }
                     break;
                 case XMLStreamConstants.END_ELEMENT:
-                    name=reader.getLocalName();
-                    if (MedicineEnum.valueOf(name.toUpperCase())==MedicineEnum.MEDICINE_DOSAGE){
+                    name = reader.getLocalName();
+                    if (MedicineEnum.valueOf(name.toUpperCase()) == MedicineEnum.MEDICINE_DOSAGE) {
                         return dosage;
                     }
             }
         }
         throw new XMLStreamException("Unknow element in tag <dosage>");
     }
-
-
 
 
     private String getXMLText(XMLStreamReader reader) throws XMLStreamException {

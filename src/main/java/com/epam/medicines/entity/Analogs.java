@@ -3,7 +3,7 @@ package com.epam.medicines.entity;
 import java.util.LinkedList;
 
 public class Analogs {
-private String name;
+    private String name;
 
     public Analogs(String name) {
         this.name = name;

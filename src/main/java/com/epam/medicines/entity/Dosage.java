@@ -1,8 +1,8 @@
 package com.epam.medicines.entity;
 
 public class Dosage {
-   private int amount;
-   private String period;
+    private int amount;
+    private String period;
 
     public Dosage() {
 
